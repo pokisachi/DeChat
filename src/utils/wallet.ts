@@ -1,4 +1,5 @@
 import { ethers } from 'ethers';
+import { argon2id } from 'argon2-browser';
 
 export interface WalletProvider {
   name: string;
@@ -59,12 +60,34 @@ export const providers = [metamaskProvider];
 
 export const createWalletFromEmail = async (email: string, password: string) => {
   try {
-    const wallet = ethers.Wallet.createRandom();
-    return wallet;
+    // 1. Tạo salt từ email
+    const salt = ethers.keccak256(ethers.toUtf8Bytes(email));
+
+    // 2. Dẫn xuất khóa bằng Argon2id
+    const hash = await argon2id({
+      pass: password,
+      salt: salt,
+      opts: {
+        time: 3, // Số lượng vòng lặp (tăng để bảo mật hơn, nhưng chậm hơn)
+        mem: 4096, // Dung lượng bộ nhớ (KB)
+        hashLen: 32, // Độ dài của hash đầu ra (32 byte = 256 bit)
+        // parallelization factor is fixed to 1 in browser
+      }
+    });
+
+    // 3. Sử dụng khóa dẫn xuất để tạo ví một cách xác định
+    const privateKey = ethers.keccak256(hash.encoded); // Hash lại để đảm bảo
+    const wallet = new ethers.Wallet(privateKey.slice(2)); // Loại bỏ "0x"
+
+    // 4. Tạo secret (có thể đơn giản là hash của private key)
+    const secret = ethers.keccak256(ethers.toUtf8Bytes(privateKey));
+
+    return {
+      wallet: wallet,
+      secret: secret
+    };
   } catch (error) {
     console.error('Error creating wallet:', error);
     throw error;
   }
 };
-
-
