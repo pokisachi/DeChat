@@ -4,7 +4,7 @@ interface MessageInputProps {
   onSendMessage: (message: string) => void;
 }
 
-const MessageInput: React.FC<MessageInputProps> = ({ onSendMessage }) => {
+export  const MessageInput: React.FC<MessageInputProps> = ({ onSendMessage }) => {
   const [message, setMessage] = useState('');
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -36,4 +36,3 @@ const MessageInput: React.FC<MessageInputProps> = ({ onSendMessage }) => {
   );
 };
 
-}

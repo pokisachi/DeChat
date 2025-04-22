@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import ChatWindow from "./components/ChatWindow";
-import MessageInput from "./components/MessageInput";
-import Auth from "./components/Auth";
+import { ChatWindow } from "./components/ChatWindow";
+import { MessageInput } from "./components/MessageInput";
+import { Auth } from "./components/Auth";
 import { initGun } from './utils/gun';
 import ProfilePopup from "./components/ProfilePopup";
 import Toast from "./components/Toast";
@@ -100,11 +100,11 @@ function App() {
               </div>
             </div>
             
-            <CollapsibleGroups
+            {/* <CollapsibleGroups
               account={account}
               onSelectChat={setCurrentChat}
               currentChat={currentChat}
-            />
+            /> */}
           </div>
 
           {/* Main Chat Area */}
@@ -113,20 +113,21 @@ function App() {
               messages={messages}
               currentUser={account}
             />
-            <MessageInput onSendMessage={handleSendMessage} />
+            <MessageInput onSendMessage={handleSendMessage} />\
+            
           </div>
         </div>
       )}
 
-      {/* Modals */}
+      {/* Modals
       {showCreateGroup && (
-        <CreateGroupModal
-          onClose={() => setShowCreateGroup(false)}
-          account={account}
-          gun={gun}
-          onError={showError}
-        />
-      )}
+        // <CreateGroupModal
+        //   onClose={() => setShowCreateGroup(false)}
+        //   account={account}
+        //   gun={gun}
+        //   onError={showError}
+        // />
+      )} */}
 
       {/* Toast */}
       {showToast && (

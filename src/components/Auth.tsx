@@ -7,7 +7,7 @@ interface AuthProps {
   setAccount: (account: string) => void;
 }
 
-const Auth: React.FC<AuthProps> = ({ setAccount }) => {
+export const Auth: React.FC<AuthProps> = ({ setAccount }) => {
   const [isConnecting, setIsConnecting] = useState(false);
   const [error, setError] = useState('');
 
