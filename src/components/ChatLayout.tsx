@@ -4,7 +4,7 @@ import React from 'react';
 import { Search, Plus, Send, Check } from 'lucide-react'; // Thêm Check icon
 import { Avatar, AvatarFallback } from "@radix-ui/react-avatar";
 import { Button } from "@/components/ui/button"; // Import chính xác
-import { Input } from "@/components/ui/input"; // Thêm Input component
+import { Input } from "@/components/ui/Input"; // Thêm Input component
 
 
 

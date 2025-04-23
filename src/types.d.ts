@@ -1,5 +1,5 @@
 // Cập nhật types.d.ts
-interface Message {
+interface Message extends Record<string, any> {
   file: React.JSX.Element;
   id: string;
   text: string;
@@ -52,15 +52,13 @@ declare module '@/components/ui/input' {
   export { Input }
   export const Button: ComponentType<any>
   export const buttonVariants: (props: any) => string
-};
+}
 declare module '@/components/ui/button' {
   import { ComponentType } from 'react'
   export const Button: ComponentType<any>
   export const buttonVariants: (props: any) => string
-};
-// src/types.d.ts
-declare type Message = {
-  file: React.ReactElement | null  // <-- Thêm union type 'null'
-  // ... các property khác
 }
+// src/types.d.ts
+
+
 

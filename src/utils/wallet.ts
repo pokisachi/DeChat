@@ -1,3 +1,4 @@
+/// <reference path="../types/argon2-browser.d.ts" />
 import { ethers } from 'ethers';
 import { argon2id } from 'argon2-browser';
 
@@ -45,7 +46,7 @@ const metamaskProvider: WalletProvider = {
     }
 
     try {
-      const provider = new ethers.BrowserProvider(window.ethereum);
+      const provider = new ethers.providers.Web3Provider(window.ethereum);
       const signer = await provider.getSigner();
       const signature = await signer.signMessage(message);
       return signature;
@@ -60,27 +61,23 @@ export const providers = [metamaskProvider];
 
 export const createWalletFromEmail = async (email: string, password: string) => {
   try {
-    // 1. Tạo salt từ email
-    const salt = ethers.keccak256(ethers.toUtf8Bytes(email));
-
-    // 2. Dẫn xuất khóa bằng Argon2id
+    const salt = ethers.utils.keccak256(ethers.utils.toUtf8Bytes(email));
     const hash = await argon2id({
       pass: password,
       salt: salt,
       opts: {
-        time: 3, // Số lượng vòng lặp (tăng để bảo mật hơn, nhưng chậm hơn)
-        mem: 4096, // Dung lượng bộ nhớ (KB)
-        hashLen: 32, // Độ dài của hash đầu ra (32 byte = 256 bit)
-        // parallelization factor is fixed to 1 in browser
+        time: 3,
+        mem: 4096,
+        hashLen: 32,
       }
     });
 
     // 3. Sử dụng khóa dẫn xuất để tạo ví một cách xác định
-    const privateKey = ethers.keccak256(hash.encoded); // Hash lại để đảm bảo
+    const privateKey = ethers.utils.keccak256(hash.encoded); // Hash lại để đảm bảo
     const wallet = new ethers.Wallet(privateKey.slice(2)); // Loại bỏ "0x"
 
     // 4. Tạo secret (có thể đơn giản là hash của private key)
-    const secret = ethers.keccak256(ethers.toUtf8Bytes(privateKey));
+    const secret = ethers.utils.keccak256(ethers.utils.toUtf8Bytes(privateKey));
 
     return {
       wallet: wallet,

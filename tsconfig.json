@@ -1,17 +1,15 @@
-{
-  "compilerOptions": {
-    "jsx": "react",
-    "target": "ES2020",
-    "useDefineForClassFields": true,
-    "module": "ESNext",
-    "lib": ["ES2020", "DOM", "DOM.Iterable"],
-    "skipLibCheck": true,
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["./src/*"]
-    },
+{ 
+   "compilerOptions": {
+     "jsx": "react",
+  "baseUrl": ".",
+  "paths": {
+    "@/*": ["./src/*"],
+    "@components/ui/*": ["./src/components/ui/*"],
+    "@/lib/*": ["./src/lib/*"]
+  },
 
     /* Bundler mode */
+    "module": "ESNext",
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
     "isolatedModules": true,
@@ -25,7 +23,11 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true
+    "noUncheckedSideEffectImports": true,
+    "typeRoots": [
+      "./node_modules/@types",
+      "./src/types"
+    ]
   },
   "include": ["src"]
 
