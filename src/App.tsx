@@ -7,6 +7,7 @@ import Toast from "./components/Toast";
 import CreateGroupModal from "./components/CreateGroupModal";
 import CollapsibleGroups from './components/CollapsibleGroups';
 import './index.css';
+import { ChatView } from './components/ChatRoom';
 
 const gun = initGun();
 

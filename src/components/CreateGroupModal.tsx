@@ -1,3 +1,4 @@
+//CreateGroupModal.tsx
 import React, { useState } from 'react';
 // Removed: import Gun from 'gun';
 import { IGunInstance } from 'gun/types';

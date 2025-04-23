@@ -1,3 +1,4 @@
+//CollapsibleGroups.tsx
 import React, { useState, useEffect } from 'react'; // Added useEffect
 import { IGunInstance } from 'gun/types';
 import { Dispatch, SetStateAction } from 'react';

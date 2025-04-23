@@ -1,3 +1,4 @@
+//GroupInfoModal.tsx
 import React, { useState } from 'react'; // Added useState for settings
 
 interface GroupMember {
