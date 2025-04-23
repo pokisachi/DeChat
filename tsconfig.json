@@ -8,8 +8,8 @@
     "skipLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]},
-    
+      "@/*": ["./src/*"]
+    },
 
     /* Bundler mode */
     "moduleResolution": "bundler",
@@ -28,5 +28,5 @@
     "noUncheckedSideEffectImports": true
   },
   "include": ["src"]
-  
+
 }

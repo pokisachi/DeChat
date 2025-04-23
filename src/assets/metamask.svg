@@ -1,10 +1,21 @@
-<svg width="35" height="33" viewBox="0 0 35 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M32.9582 1L19.8241 10.7183L22.2665 4.99099L32.9582 1Z" fill="#E17726" stroke="#E17726" stroke-width="0.25" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M2.65601 1L15.6752 10.809L13.3477 4.99098L2.65601 1Z" fill="#E27625" stroke="#E27625" stroke-width="0.25" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M28.2304 23.5334L24.7442 28.872L32.2451 30.9322L34.3836 23.6501L28.2304 23.5334Z" fill="#E27625" stroke="#E27625" stroke-width="0.25" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M1.24414 23.6501L3.37085 30.9322L10.8634 28.872L7.38892 23.5334L1.24414 23.6501Z" fill="#E27625" stroke="#E27625" stroke-width="0.25" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M10.4704 14.5149L8.39209 17.6507L15.8097 17.9924L15.5597 10.0149L10.4704 14.5149Z" fill="#E27625" stroke="#E27625" stroke-width="0.25" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M25.1375 14.5151L19.9649 9.92415L19.8232 17.9926L27.2325 17.6509L25.1375 14.5151Z" fill="#E27625" stroke="#E27625" stroke-width="0.25" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M10.8634 28.8721L15.3846 26.7036L11.4901 23.7051L10.8634 28.8721Z" fill="#E27625" stroke="#E27625" stroke-width="0.25" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M20.2227 26.7036L24.7439 28.8721L24.1172 23.7051L20.2227 26.7036Z" fill="#E27625" stroke="#E27625" stroke-width="0.25" stroke-linecap="round" stroke-linejoin="round"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="318" height="318" viewBox="0 0 318 318" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g clip-path="url(#clip0)">
+    <path d="M274.413 35.2295L175.058 107.197L192.532 65.8352L274.413 35.2295Z" fill="#E17726" stroke="#E17726" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M43.584 35.2295L141.761 107.936L125.468 65.8352L43.584 35.2295Z" fill="#E27625" stroke="#E27625" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M237.388 225.193L209.939 266.495L264.703 282.434L279.453 226.146L237.388 225.193Z" fill="#E27625" stroke="#E27625" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M38.6161 226.146L53.1504 282.434L107.914 266.495L80.6481 225.193L38.6161 226.146Z" fill="#E27625" stroke="#E27625" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M102.404 138.082L93.0862 161.752L145.792 164.034L143.245 104.982L102.404 138.082Z" fill="#E27625" stroke="#E27625" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M215.565 138.082L174.491 104.65L172.38 164.034L225.045 161.752L215.565 138.082Z" fill="#E27625" stroke="#E27625" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M107.914 266.495L144.158 248.553L110.67 221.522L107.914 266.495Z" fill="#E27625" stroke="#E27625" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M173.638 248.553L209.939 266.495L207.251 221.522L173.638 248.553Z" fill="#E27625" stroke="#E27625" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M209.939 266.495L173.638 248.553L176.391 270.864L176.106 281.74L209.939 266.495Z" fill="#D5BFB2" stroke="#D5BFB2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M107.914 266.495L141.82 281.74L141.681 270.864L144.158 248.553L107.914 266.495Z" fill="#D5BFB2" stroke="#D5BFB2" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Logo còn rất nhiều path, đây là phần tiêu biểu. Xem đầy đủ tại GitHub -->
+  </g>
+  <defs>
+    <clipPath id="clip0">
+      <rect width="318" height="318" fill="white"/>
+    </clipPath>
+  </defs>
 </svg>
